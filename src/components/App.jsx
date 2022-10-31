@@ -3,6 +3,7 @@ import shortid from 'shortid';
 import ContactForm from './ContactForm';
 import ContactList from './ContactList';
 import Filter from './Filter';
+import Notiflix from 'notiflix';
 
 export class App extends Component {
   state = {
@@ -19,7 +20,7 @@ export class App extends Component {
     const normalizedName = name.toLowerCase();
     const includesName = this.state.contacts.findIndex(({name}) => name.toLowerCase() === normalizedName);
     if (includesName !== -1) {
-      window.alert(`${name} is already in contacts`);
+      Notiflix.Notify.failure(`${name} is already in contacts`);
       return;
     }
     const newContact = {id: shortid.generate(), name, number};
