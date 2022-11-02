@@ -11,4 +11,5 @@ export const FormStyled = styled(Form)`
 `;
 
 export const Label = styled.label`
+  font-size: ${p => p.theme.fontSizes.m};
 `;

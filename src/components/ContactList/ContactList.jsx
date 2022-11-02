@@ -1,14 +1,16 @@
 import React from 'react';
-import ContactListItem from './ContactListItem';
 import PropTypes from 'prop-types';
+
+import ContactListItem from './ContactListItem';
+import Box from 'components/utils/Box';
 
 const ContactList = ({ contacts, deleteContact }) => {
   return (
-    <ul>
+    <Box as='ul' pl={ 4 }>
       {contacts.map(({ id, name: contactName, number }) => (
         <ContactListItem key={id} id={id} contactName={contactName} number={number} deleteContact={deleteContact} />
       ))}
-    </ul>
+    </Box>
   );
 };
 

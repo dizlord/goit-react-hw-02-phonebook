@@ -3,6 +3,7 @@ import { Formik, Field } from 'formik';
 import * as yup from 'yup';
 
 import FormError from 'components/FromError';
+import Box from 'components/utils/Box';
 import { FormStyled, Label } from './ContactForm.styled';
 
 const initialValues = {
@@ -31,7 +32,7 @@ export default class ContactForm extends Component {
         <FormStyled>
           <div>
             <Label htmlFor="name">Name</Label>
-            <div>
+            <Box mt={ 2 }>
               <Field
                 type="text"
                 name="name"
@@ -40,11 +41,11 @@ export default class ContactForm extends Component {
                 required
               />
               <FormError name="name"/>
-            </div>
+            </Box>
           </div>
-          <div>
+          <Box mt={4} mb={ 4 }>
             <Label htmlFor="number">Number</Label>
-            <div>
+            <Box mt={ 2 }>
               <Field
                 type="tel"
                 name="number"
@@ -53,8 +54,8 @@ export default class ContactForm extends Component {
                 required
               />
               <FormError name="number" />
-            </div>
-          </div>
+            </Box>
+          </Box>
           <button type="submit">Add contact</button>
         </FormStyled>
       </Formik>

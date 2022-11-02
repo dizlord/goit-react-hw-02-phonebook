@@ -1,12 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { Contact, Dot } from './ContactListItem.styled';
+import Box from 'components/utils/Box';
+
 const ContactListItem = ({ id, contactName, number, deleteContact }) => {
   return (
-    <li>
-      {contactName}: {number}
+    <Contact>
+      <Dot/>
+      <Box minWidth={ 4 }>
+        {contactName}: {number}
+      </Box>
       <button onClick={() => deleteContact(id)}>Delete</button>
-    </li>
+    </Contact>
   );
 };
 

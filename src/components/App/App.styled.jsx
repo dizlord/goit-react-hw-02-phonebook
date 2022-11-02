@@ -1,7 +1,9 @@
 import styled from "@emotion/styled";
 
-const PhonebookTitle = styled.h1`
+export const PhonebookTitle = styled.h1`
   margin-bottom: ${p => p.theme.space[4]}px;
 `;
 
-export default PhonebookTitle;
+export const ContactsTitle = styled.h2`
+  margin-bottom: ${p => p.theme.space[4]}px;
+`;
