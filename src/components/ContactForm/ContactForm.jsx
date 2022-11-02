@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Formik, Form, Field } from 'formik';
+import { Formik, Field } from 'formik';
 import * as yup from 'yup';
 
 import FormError from 'components/FromError';
+import { FormStyled, Label } from './ContactForm.styled';
 
 const initialValues = {
   name: '',
@@ -27,9 +28,9 @@ export default class ContactForm extends Component {
         validationSchema={schema}
         onSubmit={this.handleSubmit}
       >
-        <Form>
+        <FormStyled>
           <div>
-            <label htmlFor="name">Name:</label>
+            <Label htmlFor="name">Name</Label>
             <div>
               <Field
                 type="text"
@@ -42,7 +43,7 @@ export default class ContactForm extends Component {
             </div>
           </div>
           <div>
-            <label htmlFor="number">Number</label>
+            <Label htmlFor="number">Number</Label>
             <div>
               <Field
                 type="tel"
@@ -55,7 +56,7 @@ export default class ContactForm extends Component {
             </div>
           </div>
           <button type="submit">Add contact</button>
-        </Form>
+        </FormStyled>
       </Formik>
     );
   }
