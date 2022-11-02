@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import shortid from 'shortid';
-import ContactForm from './ContactForm';
-import ContactList from './ContactList';
-import Filter from './Filter';
 import Notiflix from 'notiflix';
+
+import ContactForm from '../ContactForm';
+import ContactList from '../ContactList';
+import Filter from '../Filter';
+import Box from 'components/utils/Box';
+import PhonebookTitle from './App.styled';
 
 export class App extends Component {
   state = {
@@ -43,15 +46,15 @@ export class App extends Component {
 render() {
   const visibleContacts = this.getVisibleContacts();
     return (
-      <div>
-        <h1>Phonebook</h1>
+      <Box p={ 4 }>
+        <PhonebookTitle>Phonebook</PhonebookTitle>
         
         <ContactForm onSubmit={ this.handleAddName } />
 
         <h2>Contacts</h2>
         <Filter value={ this.state.filter } onChange={this.changeFilter} />
         <ContactList contacts={ visibleContacts } deleteContact={this.deleteContact} />
-      </div>
+      </Box>
     )
   }
 }
