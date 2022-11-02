@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Contact, Dot } from './ContactListItem.styled';
-import Box from 'components/utils/Box';
+import Box from 'utils/Box';
 
 const ContactListItem = ({ id, contactName, number, deleteContact }) => {
   return (

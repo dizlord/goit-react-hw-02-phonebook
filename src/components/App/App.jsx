@@ -5,7 +5,7 @@ import Notiflix from 'notiflix';
 import ContactForm from '../ContactForm';
 import ContactList from '../ContactList';
 import Filter from '../Filter';
-import Box from 'components/utils/Box';
+import Box from 'utils/Box';
 import { PhonebookTitle, ContactsTitle } from './App.styled';
 
 export class App extends Component {

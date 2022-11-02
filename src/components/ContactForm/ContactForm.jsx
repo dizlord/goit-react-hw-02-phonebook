@@ -3,7 +3,7 @@ import { Formik, Field } from 'formik';
 import * as yup from 'yup';
 
 import FormError from 'components/FromError';
-import Box from 'components/utils/Box';
+import Box from 'utils/Box';
 import { FormStyled, Label } from './ContactForm.styled';
 
 const initialValues = {

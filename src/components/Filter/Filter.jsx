@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Box from 'components/utils/Box';
+import Box from 'utils/Box';
 
 const Filter = ({ value, onChange }) => {
   return (

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import ContactListItem from './ContactListItem';
-import Box from 'components/utils/Box';
+import Box from 'utils/Box';
 
 const ContactList = ({ contacts, deleteContact }) => {
   return (
